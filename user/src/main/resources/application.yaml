@@ -1,0 +1,23 @@
+#windows os에서 8080포트 사용하는 애들 찾기
+#netstat -ano | findstr :8080
+server:
+  port: 8090
+
+spring:
+  application:
+    name: user
+
+  datasource:
+    url: jdbc:mysql://localhost:3306/test_db?useSSL=false&serverTimezone=Asia/Seoul&allowPubliclyRetrieval=true
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+
+  jpa:
+    hibernate:
+      ddl-auto: validate
+
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQLDialect
+        show_sql: true
